@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Navbar from './components/navbar';
 import PieceGrid from './components/pieces/pieceGrid';
+import Hero from './components/hero';
 
 function App() {
 	const [data, setData] = useState(null);
@@ -22,6 +23,7 @@ function App() {
 		return (
 			<div className='App'>
 				<Navbar></Navbar>
+				<Hero></Hero>
 				<PieceGrid pieces={data.assets}></PieceGrid>
 			</div>
 		);
