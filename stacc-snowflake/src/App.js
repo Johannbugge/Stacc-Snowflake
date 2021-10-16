@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './components/navbar';
+import Hero from './components/hero';
 
 function App() {
     const options = { method: 'GET' };
@@ -14,6 +15,7 @@ function App() {
     return (
         <div className='App'>
             <Navbar></Navbar>
+            <Hero></Hero>
         </div>
     );
 }
