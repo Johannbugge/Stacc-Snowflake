@@ -1,19 +1,11 @@
 import s from './about.module.css';
+import { useState } from 'react';
 
-function Popup() {
-    let start = document.getElementById('moduleblur');
-    if (start.style.visiblity === 'hidden') {
-        start.style.visiblity = 'visible';
-    } else {
-        start.style.visiblity = 'hidden';
-    }
-}
-
-function About() {
+function About(props) {
     return (
         <div id={s.moduleblur}>
             <div className={s.module}>
-                <button onClick={Popup} className={s.popupbutton}>
+                <button onClick={props.handleVisible} className={s.popupbutton}>
                     X
                 </button>
                 <h2 className={s.hello}>Hei!</h2>

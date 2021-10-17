@@ -28,4 +28,5 @@
 .navigation {
     color: var(--primaryColor);
     font-weight: bold;
+    cursor: pointer;
 }

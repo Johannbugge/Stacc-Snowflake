@@ -23,14 +23,19 @@
     margin-top: 2em;
     margin-right: 100%;
     position: relative;
-    font-size: 12px;
+    font-size: 15px;
     color: var(--primaryColor);
     background-color: var(--accentColor);
-    width: 8em;
-    height: 3em;
+    width: 7em;
+    height: 2.5em;
     border-radius: 50em;
     border: none;
     cursor: pointer;
+    margin-bottom: 1em;
+}
+
+.button:hover {
+    background-color: #f35469;
 }
 
 .image {

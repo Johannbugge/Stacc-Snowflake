@@ -25,6 +25,11 @@ function App() {
         }
     }
 
+    const [visible, setVisible] = useState(false);
+    function handleVisible() {
+        setVisible(!visible);
+    }
+
     function loadData() {
         fetch(
             `https://api.opensea.io/api/v1/assets?order_direction=asc&offset=${offset}&limit=${limit}&collection=${collectionName}`,
@@ -49,8 +54,8 @@ function App() {
 
     return (
         <div className='App'>
-            <About></About>
-            <Navbar></Navbar>
+            {visible ? <About handleVisible={handleVisible}></About> : null}
+            <Navbar handleVisibleAbout={handleVisible}></Navbar>
             {data.length === 0 ? loadData() : <Hero piece={data[38]}></Hero>}
             {data.length === 0 ? null : <PieceGrid pieces={data}></PieceGrid>}
             {loading ? <ProgressIndicator></ProgressIndicator> : null}
