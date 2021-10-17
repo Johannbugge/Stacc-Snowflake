@@ -10,7 +10,7 @@ function App() {
 	const [hasMoreData, setHasMoreData] = useState(true);
 	const [offset, setOffset] = useState(0);
 	const [loading, setLoading] = useState(true);
-	const limit = 20;
+	const limit = 40;
 	const options = { method: 'GET' };
 	const collectionName = 'xenogems';
 
@@ -25,7 +25,7 @@ function App() {
 
 	function loadData() {
 		fetch(
-			`https://api.opensea.io/api/v1/assets?order_direction=desc&offset=${offset}&limit=${limit}&collection=${collectionName}`,
+			`https://api.opensea.io/api/v1/assets?order_direction=asc&offset=${offset}&limit=${limit}&collection=${collectionName}`,
 			options
 		)
 			.then((response) => response.json())
@@ -48,7 +48,7 @@ function App() {
 	return (
 		<div className='App'>
 			<Navbar></Navbar>
-			{data.length === 0 ? loadData() : <Hero piece={data[9]}></Hero>}
+			{data.length === 0 ? loadData() : <Hero piece={data[38]}></Hero>}
 			{data.length === 0 ? null : <PieceGrid pieces={data}></PieceGrid>}
 			{loading ? <ProgressIndicator></ProgressIndicator> : null}
 		</div>
