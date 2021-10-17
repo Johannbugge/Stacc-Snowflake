@@ -10,12 +10,12 @@ function Hero(props) {
                     This collection was created by{' '}
                     {props.piece.creator.user.username}
                 </h2>
-                <button
-                    onclick='https://opensea.io/collection/xenogems'
-                    className={s.button}
+                <a
+                    href='https://opensea.io/collection/xenogems'
+                    target='_blank'
                 >
-                    Explore
-                </button>
+                    <button className={s.button}>Explore</button>
+                </a>
             </div>
             <img className={s.image} src={props.piece.image_url}></img>
         </div>
