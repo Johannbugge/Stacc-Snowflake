@@ -4,6 +4,7 @@ import PieceCard from './pieceCard';
 import styles from './pieceGrid.module.css';
 
 const PieceGrid = (props) => {
+	console.log(props);
 	return (
 		<div className={styles.grid}>
 			{props.pieces.map((piece) => {

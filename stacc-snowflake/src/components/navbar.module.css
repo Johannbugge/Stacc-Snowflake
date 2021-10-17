@@ -1,31 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
 .module {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    height: 5%;
-    width: 75%;
-    top: 2%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	height: 5%;
+	width: 75%;
+	top: 2%;
 }
 
 .logo {
-    position: relative;
-    color: var(--primaryColor);
-    font-family: 'Raleway';
-    margin-right: 30%;
-    font-size: 30px;
+	position: relative;
+	color: var(--primaryColor);
+	font-family: 'Raleway';
+	margin-right: 30%;
+	font-size: 30px;
 }
 
 .logo::before {
-    position: relative;
-    content: url(../assets/logo.png);
+	position: relative;
+	content: url(../assets/logo.png);
 }
 
 p {
-    color: var(--primaryColor);
-    font-weight: bold;
+	color: var(--primaryColor);
+	font-weight: bold;
 }
