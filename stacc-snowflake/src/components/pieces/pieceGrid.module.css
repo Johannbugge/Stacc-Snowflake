@@ -3,5 +3,5 @@
 	width: 80%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	row-gap: 1%;
+	row-gap: 32px;
 }

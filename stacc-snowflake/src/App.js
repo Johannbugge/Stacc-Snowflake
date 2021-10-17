@@ -9,7 +9,7 @@ function App() {
 	const [data, setData] = useState([]);
 	const [hasMoreData, setHasMoreData] = useState(true);
 	const [offset, setOffset] = useState(0);
-	const [loading, setLoading] = useState(false);
+	const [loading, setLoading] = useState(true);
 	const limit = 20;
 	const options = { method: 'GET' };
 	const collectionName = 'xenogems';
@@ -48,8 +48,8 @@ function App() {
 	return (
 		<div className='App'>
 			<Navbar></Navbar>
-			{data.length === 0 ? null : <Hero piece={data[9]}></Hero>}
-			{data.length === 0 ? loadData() : <PieceGrid pieces={data}></PieceGrid>}
+			{data.length === 0 ? loadData() : <Hero piece={data[9]}></Hero>}
+			{data.length === 0 ? null : <PieceGrid pieces={data}></PieceGrid>}
 			{loading ? <ProgressIndicator></ProgressIndicator> : null}
 		</div>
 	);
