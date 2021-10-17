@@ -48,7 +48,7 @@ function App() {
 	return (
 		<div className='App'>
 			<Navbar></Navbar>
-			<Hero></Hero>
+			{data.length === 0 ? null : <Hero piece={data[9]}></Hero>}
 			{data.length === 0 ? loadData() : <PieceGrid pieces={data}></PieceGrid>}
 			{loading ? <ProgressIndicator></ProgressIndicator> : null}
 		</div>

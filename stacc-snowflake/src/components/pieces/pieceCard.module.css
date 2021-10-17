@@ -1,11 +1,38 @@
 .card {
-	max-width: fit-content;
-	background-color: aqua;
-	border-radius: 25px;
+    max-width: fit-content;
+    background-color: var(--primaryColor);
+    border-radius: 25px;
 }
 
 .cardImg {
-	border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
+}
+
+.name {
+    color: black;
+}
+
+.desc {
+    color: red;
+}
+
+.fav {
+    background-image: url(../../assets/notfav.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    transform: scale(0.8);
+    height: 3em;
+    width: 3em;
+    border: none;
+    position: relative;
+    top: 4em;
+    left: 2.5em;
+    transition: 100ms ease-in-out;
+}
+
+.fav:hover {
+    background-image: url(../../assets/fav.png);
+    transition: 100ms ease-in-out;
 }
 
 .desc {

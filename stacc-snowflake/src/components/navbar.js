@@ -6,9 +6,9 @@ function Navbar() {
             <div className={s.icon}></div>
 
             <h3 className={s.logo}>snowflake</h3>
-            <p>About</p>
-            <p>Favorites</p>
-            <p>Login</p>
+            <p className={s.navigation}>About</p>
+            <p className={s.navigation}>Favorites</p>
+            <p className={s.navigation}>Login</p>
         </div>
     );
 }
