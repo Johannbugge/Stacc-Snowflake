@@ -1,0 +1,41 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.first {
+    position: relative;
+    margin-left: 0;
+}
+
+.font {
+    color: var(--primaryColor);
+    text-align: left;
+    max-width: 90%;
+}
+
+.button {
+    margin-top: 2em;
+    margin-right: 100%;
+    position: relative;
+    font-size: 12px;
+    color: var(--primaryColor);
+    background-color: var(--accentColor);
+    width: 8em;
+    height: 3em;
+    border-radius: 50em;
+    border: none;
+    cursor: pointer;
+}
+
+.image {
+    margin: 0 auto;
+    transform: scale(0.5);
+    border-radius: 30%;
+    border: solid 5px white;
+}
