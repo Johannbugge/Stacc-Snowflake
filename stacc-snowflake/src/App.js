@@ -11,14 +11,13 @@ function App() {
 	const [hasMoreData, setHasMoreData] = useState(true);
 	const [offset, setOffset] = useState(0);
 	const [loading, setLoading] = useState(true);
-	const limit = 20;
+	const limit = 40;
 	const options = { method: 'GET' };
 	const collectionName = 'xenogems';
 
 	function handleScroll() {
 		const bottom = window.scrollY + window.innerHeight === document.body.scrollHeight;
 		if (!loading && hasMoreData && bottom) {
-			console.log('Bottom!');
 			setLoading(true);
 			loadData();
 		}

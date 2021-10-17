@@ -3,7 +3,6 @@ import React from 'react';
 import styles from './pieceCard.module.css';
 
 const PieceCard = (props) => {
-	console.log(props);
 	function setFavorite() {
 		props.handleSetFavorite(props.piece.token_id);
 	}

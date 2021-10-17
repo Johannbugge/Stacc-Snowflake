@@ -1,7 +1,6 @@
 import s from './hero.module.css';
 
 function Hero(props) {
-	console.log(props);
 	return (
 		<div className={s.hero}>
 			<div className={s.first}>
