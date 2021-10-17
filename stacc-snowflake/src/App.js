@@ -7,23 +7,21 @@ import ProgressIndicator from './components/progressIndicator';
 import About from './components/about';
 
 function App() {
-    const [data, setData] = useState([]);
-    const [hasMoreData, setHasMoreData] = useState(true);
-    const [offset, setOffset] = useState(0);
-    const [loading, setLoading] = useState(true);
-    const limit = 40;
-    const options = { method: 'GET' };
-    const collectionName = 'xenogems';
+	const [data, setData] = useState([]);
+	const [hasMoreData, setHasMoreData] = useState(true);
+	const [offset, setOffset] = useState(0);
+	const [loading, setLoading] = useState(true);
+	const limit = 40;
+	const options = { method: 'GET' };
+	const collectionName = 'xenogems';
 
-    function handleScroll() {
-        const bottom =
-            window.scrollY + window.innerHeight === document.body.scrollHeight;
-        if (!loading && hasMoreData && bottom) {
-            console.log('Bottom!');
-            setLoading(true);
-            loadData();
-        }
-    }
+	function handleScroll() {
+		const bottom = window.scrollY + window.innerHeight === document.body.scrollHeight;
+		if (!loading && hasMoreData && bottom) {
+			setLoading(true);
+			loadData();
+		}
+	}
 
     const [visible, setVisible] = useState(false);
     function handleVisible() {
@@ -45,12 +43,12 @@ function App() {
             .catch((err) => console.error(err));
     }
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    });
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 
     return (
         <div className='App'>
