@@ -11,7 +11,7 @@ function Hero(props) {
                     {props.piece.creator.user.username}
                 </h2>
                 <a
-                    href='https://opensea.io/collection/xenogems'
+                    href={`https://opensea.io/collection/${props.piece.collection.slug}`}
                     target='_blank'
                 >
                     <button className={s.button}>Explore</button>
