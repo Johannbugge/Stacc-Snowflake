@@ -10,11 +10,10 @@ function App() {
 	const [offset, setOffset] = useState(0);
 	const options = { method: 'GET' };
 	const collectionName = 'xenogems';
-	let bottom = false;
 
 	function loadData() {
 		fetch(
-			`https://api.opensea.io/api/v1/assets?order_direction=desc&offset=${offset}&limit=20&collection=${collectionName}`,
+			`https://api.opensea.io/api/v1/assets?order_direction=desc&offset=${offset}&limit=50&collection=${collectionName}`,
 			options
 		)
 			.then((response) => response.json())
@@ -22,16 +21,6 @@ function App() {
 			.catch((err) => console.error(err));
 		return <ProgressIndicator></ProgressIndicator>;
 	}
-
-	function handleScroll() {
-		if (!bottom && window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-			console.log('bottom');
-			bottom = true;
-			window.removeEventListener('scroll', handleScroll);
-		}
-	}
-
-	window.addEventListener('scroll', handleScroll);
 
 	return (
 		<div className='App'>

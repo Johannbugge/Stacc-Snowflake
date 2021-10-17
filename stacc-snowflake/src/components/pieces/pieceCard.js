@@ -7,7 +7,7 @@ const PieceCard = (props) => {
 		<div className={styles.card}>
 			<img className={styles.cardImg} src={props.piece.image_preview_url} alt={props.piece.description}></img>
 			<p>{props.piece.name}</p>
-			<p>{props.piece.description}</p>
+			<p className={styles.desc}>{props.piece.description}</p>
 			{props.piece.sell_orders ? (
 				<p>{parseInt(props.piece.sell_orders[0].current_price) / 1000000000000000000} Ξ</p>
 			) : null}
