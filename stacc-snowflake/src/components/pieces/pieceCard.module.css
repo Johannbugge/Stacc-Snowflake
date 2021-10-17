@@ -9,11 +9,26 @@
 }
 
 .name {
-	color: black;
+	color: var(--backgroundColor);
 }
 
 .desc {
-	color: red;
+	color: grey;
+	max-width: 50%;
+}
+
+.info {
+	position: relative;
+	text-align: left;
+	margin-left: 1em;
+	font-size: 14px;
+}
+
+.price {
+	position: relative;
+	text-align: right;
+	margin-right: 1em;
+	bottom: 5.5em;
 }
 
 .fav {
@@ -52,8 +67,4 @@
 .notfav:hover {
 	background-image: url(../../assets/fav.png);
 	transition: 100ms ease-in-out;
-}
-
-.desc {
-	color: red;
 }
